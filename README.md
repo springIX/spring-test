@@ -30,7 +30,7 @@ npm run build
 - 하단에 다음 텍스트를 붙여 넣고 저장합니다. 
 ~~~
 <VirtualHost *:9001>
-    ServerAdmin gke3364@outspring.co.kr
+    ServerAdmin phoebe@the-jey.com
     DocumentRoot "C:\Users\user\Desktop\spring\spring-sensee\root"
     ServerName localhost
     ServerAlias localhost
