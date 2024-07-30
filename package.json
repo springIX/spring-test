@@ -1,14 +1,23 @@
 {
-  "name": "spring-sensee",
+  "name": "thej-vite-template",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "vite",
+    "dev": "vite serve",
     "build": "vite build",
     "preview": "vite preview"
   },
+  "author": "phoebe@the-jey.com",
+  "license": "ISC",
   "devDependencies": {
-    "vite": "^5.3.4"
+    "@splidejs/splide": "^4.0.1",
+    "fast-glob": "^3.2.11",
+    "pug": "^3.0.2",
+    "sass": "^1.51.0",
+    "vite": "^2.9.5",
+    "vite-plugin-pug": "^0.3.1"
   }
 }
