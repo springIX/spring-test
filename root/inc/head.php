@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
 <meta name="format-detection" content="telephone=no" />
 
-<title><?=$pageTitle?></title>
+<title>SENSEE</title>
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta property="og:title" content="" />
@@ -28,6 +28,13 @@
 
 <link rel="stylesheet" href="/assets/css/common.css">
 
+
+<?php
+require_once __DIR__ . '/mobile-detect.php';
+$detect = new Mobile_Detect;
+$deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'desktop');
+$scriptVersion = $detect->getScriptVersion();
+?>
 
 
 <script type="text/javascript">var deviceType = "<?=$deviceType?>";</script>

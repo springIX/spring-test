@@ -2,6 +2,7 @@
 
 <head>
 <meta charset="UTF-8">
+<?php include 'inc/functions.php'; ?>
 <?php include "./inc/head.php"; ?>
 </head>
 <style type="text/css">
@@ -17,15 +18,12 @@ body.main {
 
 </style>
 
-<div id="currentProject">
-  <div class="scroll-down bounce">
-    <p><em>Scroll</em></p>
-    <div class="span"></div>
-  </div>
+<div>
+  main
 </div>
 
 
-  <?=echoBeTheNewJ()?>
+
 <?php include ".//inc/footer.php"; ?>
 </body>
 
