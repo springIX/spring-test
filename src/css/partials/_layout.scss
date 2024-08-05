@@ -24,10 +24,10 @@ h2{
   @include font-weight(Regular);
   @include font-size(M, 40px);
 	@include font-size(D, 150px);
-  letter-spacing: -2px;
+  // letter-spacing: -2px;
   @include line-height(40px, 48px);
   @include screen("desktop") {
-    letter-spacing: -4px;
+    // letter-spacing: -4px;
     @include line-height(150px, 160px);
   }
 } // 히어로배너 타이틀
