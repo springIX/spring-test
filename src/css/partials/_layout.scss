@@ -2,10 +2,11 @@
 @import "variable";
 @import "mixin";
 
+
 // default
 body {
   // scroll-behavior: smooth; // error
-  font-family: $font-kr, sans-serif;
+  font-family: $font-kr;
   @include font-weight(Regular);
   @include font-size(M, 14px);
 	@include font-size(D, 16px);
@@ -15,12 +16,14 @@ body {
   }
 }
 
+
 // eng
-.pps{  font-family: $font-en, sans-serif;}
+.pps{  font-family: $font-en;}
+
 
 // headline component
 h2{ 
-  font-family: $font-en, sans-serif;
+  font-family: $font-en;
   @include font-weight(Regular);
   @include font-size(M, 40px);
 	@include font-size(D, 150px);
@@ -49,7 +52,7 @@ h3{
 } // 섹션 타이틀
 
 h4{
-  @include font-weight(Bold);
+  @include font-weight(Regular);
   @include font-size(M, 32px);
 	@include font-size(D, 80px);
   @include line-height(32px, 46px);
@@ -59,7 +62,7 @@ h4{
 } // 섹션 타이틀2
 
 h5{
-  font-family: $font-en, sans-serif;
+  font-family: $font-en;
   @include font-weight(Bold);
   @include font-size(M, 14px);
 	@include font-size(D, 24px);
@@ -73,4 +76,87 @@ h5{
 
 
 // contents component
-.sub_head{}
+.sub_head{
+  @include font-weight(Black);
+  @include font-size(M, 12px);
+	@include font-size(D, 16px);
+  @include line-height(12px, 28px);
+  @include screen("desktop") {
+    @include line-height(16px, 28px);
+  }
+  &.pps{
+    @include font-weight(bold);
+  }
+} // 서브 헤드라인
+
+.sub_tit{
+  @include font-weight(Medium);
+  @include font-size(M, 24px);
+	@include font-size(D, 48px);
+  @include line-height(24px, 32px);
+  @include screen("desktop") {
+    @include font-weight(Regular);
+    @include line-height(48px, 72px);
+  }
+} // 설명형 타이틀1
+
+.sub_tit2{
+  @include font-weight(Bold);
+  @include font-size(M, 32px);
+	@include font-size(D, 40px);
+  @include line-height(32px, 40px);
+  @include screen("desktop") {
+    @include font-weight(Regular);
+    @include line-height(40px, 56px);
+  }
+  &.pps{
+    @include font-weight(SemiBold);
+  }
+} // 설명형 타이틀2
+
+.sub_tit3{
+  @include font-weight(Bold);
+  @include font-size(M, 16px);
+	@include font-size(D, 24px);
+  @include line-height(16px, 24px);
+  @include screen("desktop") {
+    @include line-height(24px, 36px);
+  }
+  &.pps{
+    @include screen("desktop") {
+      @include font-weight(SemiBold);
+    }
+  }
+} // 설명형 타이틀3
+
+.body_txt{
+  @include font-weight(Regular);
+  @include font-size(M, 14px);
+	@include font-size(D, 20px);
+  @include line-height(14px, 24px);
+  @include screen("desktop") {
+    @include line-height(20px, 32px);
+  }
+} // 섹션 타이틀 본문
+
+.caption{
+  @include font-weight(Regular);
+  @include font-size(M, 12px);
+	@include font-size(D, 14px);
+  @include line-height(12px, 16px);
+  @include screen("desktop") {
+    @include line-height(14px, 20px);
+  }
+} // 부연설명
+
+
+// btn component
+.btn{ 
+  background-color: transparent; border: none; text-align: center; display: flex; cursor: pointer;
+  &::before{ 
+    content: 'Touch more'; color: $color-white; 
+    background-color: $color-black; font-family: $font-en; 
+    @include font-weight(Bold); width: 150px; height: 56px; 
+    line-height: 56px; border-radius: 2px;}
+  &::after{ content: ''; width: 56px; height: 56px; background: $color-black url()no-repeat center center / 40% auto; margin-left: 1px; border-radius: 2px;}
+}

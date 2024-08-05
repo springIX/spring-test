@@ -2,10 +2,10 @@
 
 <head>
 <meta charset="UTF-8">
-<?php include 'inc/functions.php'; ?>
+<?php include 'functions.php'; ?>
 <?php include "./inc/head.php"; ?>
 </head>
-<body>
+<body style="background:#000;">
 <?php include "./inc/header.php"; ?>
 <div>
   main

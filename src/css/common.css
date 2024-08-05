@@ -561,7 +561,7 @@ h3.pps {
 }
 
 h4 {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 4.2666666667vw;
   line-height: 143.75%;
 }
@@ -645,6 +645,288 @@ h5 {
   }
 }
 
+.sub_head {
+  font-weight: 900;
+  font-size: 1.6vw;
+  line-height: 233.3333333333%;
+}
+@media (min-width: 375px) and (max-width: 750px) {
+  .sub_head {
+    font-size: 1.6vw;
+  }
+}
+@media (min-width: 375px) and (max-width: 375pxpx) {
+  .sub_head {
+    font-size: 6px;
+  }
+}
+@media (max-width: 374px) {
+  .sub_head {
+    font-size: 6px;
+  }
+}
+@media (min-width: 1441px) {
+  .sub_head {
+    font-size: 16px;
+  }
+}
+@media (min-width: 751px) and (max-width: 1440px) {
+  .sub_head {
+    font-size: 1.1111111111vw;
+  }
+}
+@media (min-width: 751px) and (max-width: 1080px) {
+  .sub_head {
+    font-size: 12px;
+  }
+}
+@media (min-width: 751px) {
+  .sub_head {
+    line-height: 175%;
+  }
+}
+.sub_tit {
+  font-weight: 500;
+  font-size: 3.2vw;
+  line-height: 133.3333333333%;
+}
+@media (min-width: 375px) and (max-width: 750px) {
+  .sub_tit {
+    font-size: 3.2vw;
+  }
+}
+@media (min-width: 375px) and (max-width: 375pxpx) {
+  .sub_tit {
+    font-size: 12px;
+  }
+}
+@media (max-width: 374px) {
+  .sub_tit {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1441px) {
+  .sub_tit {
+    font-size: 48px;
+  }
+}
+@media (min-width: 751px) and (max-width: 1440px) {
+  .sub_tit {
+    font-size: 3.3333333333vw;
+  }
+}
+@media (min-width: 751px) and (max-width: 960px) {
+  .sub_tit {
+    font-size: 32px;
+  }
+}
+@media (min-width: 751px) {
+  .sub_tit {
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+.sub_tit2 {
+  font-weight: 700;
+  font-size: 4.2666666667vw;
+  line-height: 125%;
+}
+@media (min-width: 375px) and (max-width: 750px) {
+  .sub_tit2 {
+    font-size: 4.2666666667vw;
+  }
+}
+@media (min-width: 375px) and (max-width: 375pxpx) {
+  .sub_tit2 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 374px) {
+  .sub_tit2 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1441px) {
+  .sub_tit2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 751px) and (max-width: 1440px) {
+  .sub_tit2 {
+    font-size: 2.7777777778vw;
+  }
+}
+@media (min-width: 751px) and (max-width: 960px) {
+  .sub_tit2 {
+    font-size: 26.6666666667px;
+  }
+}
+@media (min-width: 751px) {
+  .sub_tit2 {
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+.sub_tit2.pps {
+  font-weight: 600;
+}
+
+.sub_tit3 {
+  font-weight: 700;
+  font-size: 2.1333333333vw;
+  line-height: 150%;
+}
+@media (min-width: 375px) and (max-width: 750px) {
+  .sub_tit3 {
+    font-size: 2.1333333333vw;
+  }
+}
+@media (min-width: 375px) and (max-width: 375pxpx) {
+  .sub_tit3 {
+    font-size: 8px;
+  }
+}
+@media (max-width: 374px) {
+  .sub_tit3 {
+    font-size: 8px;
+  }
+}
+@media (min-width: 1441px) {
+  .sub_tit3 {
+    font-size: 24px;
+  }
+}
+@media (min-width: 751px) and (max-width: 1440px) {
+  .sub_tit3 {
+    font-size: 1.6666666667vw;
+  }
+}
+@media (min-width: 751px) and (max-width: 960px) {
+  .sub_tit3 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 751px) {
+  .sub_tit3 {
+    line-height: 150%;
+  }
+}
+@media (min-width: 751px) {
+  .sub_tit3.pps {
+    font-weight: 600;
+  }
+}
+
+.body_txt {
+  font-weight: 400;
+  font-size: 1.8666666667vw;
+  line-height: 171.4285714286%;
+}
+@media (min-width: 375px) and (max-width: 750px) {
+  .body_txt {
+    font-size: 1.8666666667vw;
+  }
+}
+@media (min-width: 375px) and (max-width: 375pxpx) {
+  .body_txt {
+    font-size: 7px;
+  }
+}
+@media (max-width: 374px) {
+  .body_txt {
+    font-size: 7px;
+  }
+}
+@media (min-width: 1441px) {
+  .body_txt {
+    font-size: 20px;
+  }
+}
+@media (min-width: 751px) and (max-width: 1440px) {
+  .body_txt {
+    font-size: 1.3888888889vw;
+  }
+}
+@media (min-width: 751px) and (max-width: 960px) {
+  .body_txt {
+    font-size: 13.3333333333px;
+  }
+}
+@media (min-width: 751px) {
+  .body_txt {
+    line-height: 160%;
+  }
+}
+
+.caption {
+  font-weight: 400;
+  font-size: 1.6vw;
+  line-height: 133.3333333333%;
+}
+@media (min-width: 375px) and (max-width: 750px) {
+  .caption {
+    font-size: 1.6vw;
+  }
+}
+@media (min-width: 375px) and (max-width: 375pxpx) {
+  .caption {
+    font-size: 6px;
+  }
+}
+@media (max-width: 374px) {
+  .caption {
+    font-size: 6px;
+  }
+}
+@media (min-width: 1441px) {
+  .caption {
+    font-size: 14px;
+  }
+}
+@media (min-width: 751px) and (max-width: 1440px) {
+  .caption {
+    font-size: 0.9722222222vw;
+  }
+}
+@media (min-width: 751px) and (max-width: 1234.2857142857px) {
+  .caption {
+    font-size: 12px;
+  }
+}
+@media (min-width: 751px) {
+  .caption {
+    line-height: 142.8571428571%;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  display: flex;
+  cursor: pointer;
+}
+.btn::before {
+  content: "Touch more";
+  color: #ffffff;
+  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  width: 150px;
+  height: 56px;
+  line-height: 56px;
+  border-radius: 2px;
+}
+.btn::after {
+  content: "";
+  width: 56px;
+  height: 56px;
+  background: #000000 url() no-repeat center center/40% auto;
+  margin-left: 1px;
+  border-radius: 2px;
+}
+
 /*
 * Functions
 */
@@ -657,6 +939,13 @@ h5 {
 /*
 * Etc
 */
+.header {
+  width: 100%;
+  height: 100px;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
 /*
 * Functions
 */

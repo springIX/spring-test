@@ -17,6 +17,7 @@ body.main {
 }
 
 </style>
+<?php include "./inc/header.php"; ?>
 
 <div>
   main
