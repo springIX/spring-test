@@ -1,0 +1,76 @@
+// scss settings
+@import "variable";
+@import "mixin";
+
+// default
+body {
+  // scroll-behavior: smooth; // error
+  font-family: $font-kr, sans-serif;
+  @include font-weight(Regular);
+  @include font-size(M, 14px);
+	@include font-size(D, 16px);
+  @include line-height(14px, 20px);
+  @include screen("desktop") {
+    @include line-height(16px, 28px);
+  }
+}
+
+// eng
+.pps{  font-family: $font-en, sans-serif;}
+
+// headline component
+h2{ 
+  font-family: $font-en, sans-serif;
+  @include font-weight(Regular);
+  @include font-size(M, 40px);
+	@include font-size(D, 150px);
+  letter-spacing: -2px;
+  @include line-height(40px, 48px);
+  @include screen("desktop") {
+    letter-spacing: -4px;
+    @include line-height(150px, 160px);
+  }
+} // 히어로배너 타이틀
+
+h3{
+  @include font-weight(Bold);
+  @include font-size(M, 40px);
+	@include font-size(D, 100px);
+  @include line-height(40px, 56px);
+  @include screen("desktop") {
+    @include line-height(100px, 144px);
+  }
+  &.pps{
+    @include font-weight(SemiBold);
+    @include screen("desktop") {
+      @include line-height(100px, 120px);
+    }
+  }
+} // 섹션 타이틀
+
+h4{
+  @include font-weight(Bold);
+  @include font-size(M, 32px);
+	@include font-size(D, 80px);
+  @include line-height(32px, 46px);
+  @include screen("desktop") {
+    @include line-height(80px, 100px);
+  }
+} // 섹션 타이틀2
+
+h5{
+  font-family: $font-en, sans-serif;
+  @include font-weight(Bold);
+  @include font-size(M, 14px);
+	@include font-size(D, 24px);
+  @include line-height(14px, 16px);
+  letter-spacing: 7px;
+  @include screen("desktop") {
+    @include line-height(24px, 36px);
+    letter-spacing: 12px;
+  } 
+} // 섹션 소타이틀
+
+
+// contents component
+.sub_head{}
