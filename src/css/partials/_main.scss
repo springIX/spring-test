@@ -1,3 +1,411 @@
 // scss settings
 @import "variable";
 @import "mixin";
+
+// components
+@import "../partials/full-visual";
+body.hidden {
+	height: 100%;
+	min-height: 100%;
+	overflow: hidden !important;
+	touch-action: none;
+}
+.desktop {
+	display: none;
+	@include screen("desktop") {
+		display: block;
+	}
+}
+.mobile {
+	display: block;
+	@include screen("desktop") {
+		display: none;
+	}
+}
+.main-wrap {
+
+	// common text box
+	.main-title {
+		.desc {
+			@include res-vw(M, padding-top, 30px);
+			@include screen("desktop") {
+				@include res-vw(D, padding-top, 20px);
+			}
+		}
+		.desc {
+			color: $color-gray3;
+			@include screen(custom, max, 750) {
+				@include res-vw(M, max-width, 630px);
+			}
+		}
+	}
+
+	// key visual
+	.main-kv {
+		height: 100vh;
+		@include screen("desktop") {
+			height: auto;
+		}
+	}
+	.key-visual {
+		background-color: $color-black;
+		@include screen("desktop") {
+			max-height: 92vh;
+		}
+		> li {
+			background-color: aqua;
+		}
+		.swiper-slide *,
+		.swiper-slide *:after,
+		.swiper-slide *:before {
+			-webkit-backface-visibility: hidden;
+			-webkit-transform: translateZ(0);
+			-webkit-transform: translate3d(0, 0, 0);
+		}
+		.swiper {
+			&-wrapper {
+				will-change: transform;
+				align-items: flex-start;
+				height: 100% !important;
+				@include screen("desktop") {
+					max-height: 92vh;
+				}
+			}
+			&-slide {
+				position: relative;
+				display: block;
+				will-change: contents;
+				z-index: 1;
+				min-width: 100%;
+				@include screen("desktop") {
+					min-width: 0;
+					text-align: center;
+					@include res-vw(D, max-height, 940px);
+				}
+				&-active {
+					z-index: 2;
+				}
+				.image-area {
+					position: relative;
+					max-height: 92vh;
+					overflow: hidden;
+					&:before {
+						display: block;
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						@include res-vw(M, height, 160px);
+						background: linear-gradient(360deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+						z-index: 1;
+						@include screen("desktop") {
+							@include res-vw(D, height, 200px);
+						}
+					}
+					&:after {
+						display: block;
+						content: "";
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						@include res-vw(M, height, 160px);
+						background: linear-gradient(360deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+						z-index: 1;
+						@include screen("desktop") {
+							display: block;
+							@include res-vw(D, height, 400px);
+							background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+						}
+					}
+					.inner {
+						width: 100%;
+						height: 100%;
+						position: relative;
+						overflow: hidden;
+						@include screen(custom, max, 750) {
+							@include res-vw(M, height, 900px);
+						}
+						.kv-video {
+							position: absolute;
+							z-index: 4;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+						}
+					}
+					.kv-video {
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+					}
+					video {
+						width: 100%;
+						@include res-vw(M, height, 900px);
+						will-change: auto;
+						transform: translateZ(0);
+						object-fit: cover;
+						@include screen("desktop") {
+							height: 100%;
+							vertical-align: top;
+						}
+					}
+				}
+			}
+			&-pagination {
+				display: flex;
+				align-items: center;
+				color: $color-white;
+				@include res-vw(M, padding, 70px, 0, 60px);
+				@include screen("desktop") {
+					padding: 0;
+				}
+				&-wrap {
+					width: 100%;
+					text-align: center;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					@include screen("desktop") {
+						position: absolute;
+						z-index: 10;
+						@include res-vw(D, bottom, 21px);
+					}
+					.btn-play,
+					.btn-pause {
+						padding: 0;
+						background: none;
+						@include res-vw(M, margin-top, 5px);
+						@include res-vw(M, margin-left, 24px);
+						color: $color-white;
+						@include screen("desktop") {
+							margin-top: 0;
+							@include res-vw(D, margin-left, 10px);
+						}
+						&:not(.active) {
+							display: none;
+						}
+					}
+				}
+				&-bullet {
+					display: inline-block;
+					background-color: #fff;
+					cursor: pointer;
+					position: relative;
+					@include res-vw(M, width, 30px);
+					@include res-vw(M, height, 8px);
+					@include res-vw(M, margin, 0, 10px);
+					@include screen("desktop") {
+						@include res-vw(D, width, 20px);
+						@include res-vw(D, height, 4px);
+						@include res-vw(D, margin, 0, 6px);
+					}
+					.category {
+						position: absolute;
+						overflow: hidden;
+						@include res-vw(M, top, -44px);
+						left: 0;
+						@include font-size(M, 24px);
+						@include font-size(D, 14px);
+						white-space: nowrap;
+						@include screen("desktop") {
+							@include res-vw(D, top, -22px);
+						}
+						span {
+							display: block;
+							opacity: 0;
+							transform: translateY(100%);
+						}
+					}
+					&-active {
+						@include res-vw(M, width, 160px);
+						background: rgba(255, 255, 255, 0.2);
+						@include screen("desktop") {
+							@include res-vw(D, width, 100px);
+						}
+						.category {
+							span {
+								opacity: 1;
+								transform: translateY(0px);
+								transition: all 0.3s linear;
+								transition-delay: 0.8s;
+							}
+						}
+						.progress {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							transform-origin: left;
+							-webkit-transform: scaleX(0);
+							transform: scaleX(0);
+							background-color: $color-red;
+						}
+					}
+					&.on {
+						position: relative;
+						@include res-vw(M, width, 160px);
+						background: rgba(255, 255, 255, 0.2);
+						@include screen("desktop") {
+							@include res-vw(D, width, 100px);
+						}
+					}
+				}
+			}
+		}
+		.text-box {
+			color: $color-white;
+			width: 100%;
+			@include res-vw(M, padding, 0, $paddingMobile);
+			@include screen("desktop") {
+				display: inline-block;
+				@include res-vw(D, max-width, 930px);
+				transition: all 0.1s linear;
+				padding: 0;
+			}
+			.title {
+				margin: 0 auto;
+				@include res-vw(M, max-width, 600px);
+				@include screen("desktop") {
+					max-width: 100%;
+				}
+			}
+			.desc {
+				@include res-vw(M, max-width, 600px);
+				@include screen("desktop") {
+					max-width: 100%;
+				}
+			}
+			> div:not(.cta-wrap) {
+				overflow: hidden;
+				span {
+					display: inline-block;
+					vertical-align: top;
+					align-items: center;
+					opacity: 0;
+					transform: translateY(100%);
+				}
+				&.eyebrow span {
+					display: block;
+				}
+			}
+			.cta-wrap {
+				opacity: 0;
+				transform: translateY(50px);
+				.btn {
+					span {
+						&::after {
+							transform: rotate(135deg);
+						}
+					}
+				}
+			}
+		}
+		&.swiper-load {
+			.text-box {
+				> div:not(.cta-wrap) {
+					span {
+						opacity: 1;
+						transform: translateY(0px);
+						transition: all 0.5s linear;
+						transition-delay: 300ms;
+					}
+				}
+				.cta-wrap {
+					opacity: 1;
+					transform: translateY(0px);
+					transition: all 0.5s linear;
+					transition-delay: 300ms;
+				}
+			}
+		}
+		.image-area {
+			position: relative;
+			width: 100%;
+			transition: all 0.1s linear;
+			.img {
+				@include aspect-ratio(375, 450);
+				@include screen("desktop") {
+					@include aspect-ratio(1920, 940);
+				}
+			}
+			.dimmed {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 1;
+				opacity: 0;
+			}
+		}
+		.btn-floating {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 2;
+			text-decoration: none;
+			@include screen("desktop") {
+				display: none;
+			}
+			&:hover,
+			&:focus {
+				~ .floating-area .btn.box {
+					$btnTransTime: 0.2s;
+					background: $color-red;
+					color: $color-white;
+					border-color: $color-red;
+					transition: background-color $btnTransTime, border-color $btnTransTime, color $btnTransTime;
+					span:after {
+						transition: border-color $btnTransTime;
+						border-color: $color-white;
+					}
+				}
+			}
+		}
+		.floating-area {
+			position: relative;
+			@include res-vw(M, margin-top, -160px);
+			width: 100%;
+			z-index: 3;
+			pointer-events: none;
+			// @include res-vw(M, bottom, 69px);
+			@include screen("desktop") {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				z-index: 3;
+				pointer-events: none;
+				margin-top: 0;
+				@include res-vw(D, bottom, 120px);
+			}
+			a {
+				pointer-events: all;
+			}
+			&:before {
+				display: block;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(360deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+				z-index: 0;
+				@include screen("desktop") {
+					height: max(get-vw(940px * 0.65, $design-d));
+				}
+			}
+		}
+	}
+
+}

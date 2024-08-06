@@ -1,0 +1,143 @@
+// scss settings
+@import "variable";
+@import "mixin";
+
+.swiper-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	&.swiper-autoheight {
+		height: auto;
+		.swiper-slide {
+			height: auto;
+		}
+	}
+}
+.swiper-wrapper {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	transition-property: transform;
+	box-sizing: border-box;
+	align-items: center;
+}
+.swiper-slide {
+	position: relative;
+	transition-property: transform;
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+
+	img {
+		width: 100%;
+		height: 100%;
+		// object-fit: cover;
+	}
+}
+.swiper-button {
+	&-prev,
+	&-next {
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 10;
+		border: 0;
+		color: $color-white;
+		cursor: pointer;
+		background: transparent;
+		background: rgba(0, 0, 0, 0.5);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		@include res-vw(M, width, 60px);
+		@include res-vw(M, height, 60px);
+		@include screen("desktop") {
+			@include res-vw(D, width, 50px);
+			@include res-vw(D, height, 50px);
+		}
+		&:before {
+			content: "";
+			display: block;
+			@include res-vw(M, width, 22px);
+			@include res-vw(M, height, 38px);
+			@include screen("desktop") {
+				@include res-vw(D, width, 14px);
+				@include res-vw(D, height, 24px);
+				@include res-vw(D, margin-left, 3px);
+			}
+		}
+		&:focus,
+		&:hover {
+			// @include screen("desktop") {
+			border: 1px solid rgba(255, 255, 255, 1);
+			//}
+		}
+	}
+	&-prev {
+		transform: translateY(-50%) rotateY(180deg);
+		@include res-vw(M, left, 20px);
+		@include screen("desktop") {
+			@include res-vw(D, left, 50px);
+		}
+	}
+	&-next {
+		@include res-vw(M, right, 20px);
+		@include screen("desktop") {
+			@include res-vw(D, right, 50px);
+		}
+	}
+	&-disabled {
+		opacity: 1;
+		cursor: default;
+		background-color: transparent;
+		@include screen("desktop") {
+			border: 1px solid rgba(153, 153, 153, .4);
+		}		
+		&:before {
+			opacity: .25;
+			@include screen("desktop") {
+				opacity: .4;
+				background : {
+					image: url("../images/common/icon-kv-arrow-gray9.svg");
+					position: 100% 50%;
+					size: 100% auto;
+					repeat: no-repeat;
+				}
+			}
+		}
+		&:focus,
+		&:hover {
+			@include screen("desktop") {
+				border: 1px solid rgba(153, 153, 153, .4);	
+			}
+		}
+	}
+}
+.swiper-pagination {
+	&-clickable {
+		.swiper-pagination-bullet {
+			cursor: pointer;
+		}
+	}
+}
+

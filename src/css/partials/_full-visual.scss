@@ -1,0 +1,18 @@
+.full-visual {
+	.image-area {
+		z-index: 0;
+		img {
+			width: 100%;
+			vertical-align: top;
+		}
+	}
+	.floating-area {
+		z-index: 1;
+	}
+	.text-box {
+		color: $color-white;
+	}
+	.bg-bright .text-box {
+		color: $color-black;
+	}
+}
