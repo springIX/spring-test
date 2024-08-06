@@ -133,11 +133,6 @@ dfn {
 	* Correct the font size and margin on `h1` elements within `section` and
 	* `article` contexts in Chrome, Firefox, and Safari.
 	*/
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 /**
 	* Add the correct background and color in IE 9-.
 	*/
@@ -463,6 +458,19 @@ body {
   }
 }
 
+img {
+  display: block;
+}
+
+div, p, span, a, section, label, input, button, h1, h2, h3, h4, h5, h6, ul, ol, li, header, footer, main, b, i, strong, select {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .pps {
   font-family: "Poppins", sans-serif;
 }
@@ -471,7 +479,6 @@ h2 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 5.3333333333vw;
-  letter-spacing: -2px;
   line-height: 120%;
 }
 @media (min-width: 375px) and (max-width: 750px) {
@@ -506,7 +513,6 @@ h2 {
 }
 @media (min-width: 751px) {
   h2 {
-    letter-spacing: -4px;
     line-height: 106.6666666667%;
   }
 }
@@ -943,7 +949,20 @@ h5 {
   width: 100%;
   height: 100px;
   color: #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0 44px;
+}
+.header .logo {
+  width: 109px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header nav ul {
+  display: flex;
+  gap: 60px;
 }
 
 /*
