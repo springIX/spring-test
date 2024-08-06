@@ -2,7 +2,7 @@
 
 <head>
 <meta charset="UTF-8">
-<?php include 'inc/functions.php'; ?>
+<?php include '/functions.php'; ?>
 <?php include "./inc/head.php"; ?>
 </head>
 <style type="text/css">

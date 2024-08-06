@@ -2,8 +2,8 @@
 
 <head>
 <meta charset="UTF-8">
-<?php include 'functions.php'; ?>
 <?php include "./inc/head.php"; ?>
+<?php include 'functions.php'; ?>
 </head>
 <body style="background:#000;">
 <?php include "./inc/header.php"; ?>

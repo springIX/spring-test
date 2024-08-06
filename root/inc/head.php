@@ -2,14 +2,14 @@
 <meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
 <meta name="format-detection" content="telephone=no" />
 
-<title>SENSEE</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta property="og:title" content="" />
+<title><?=$pageTitle?></title>
+<meta name="description" content="<?=$pageDescription?>">
+<meta name="keywords" content="<?=$pageKeywords?>">
+<meta property="og:title" content="<?=$pageTitle?>" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="" />
-<meta property="og:image" content="" />
-<link rel="canonical" href="" />
+<meta property="og:url" content="<?=$pageUrl?>" />
+<meta property="og:image" content="<?=$pageImages?>" />
+<link rel="canonical" href="<?=$pageUrl?>" />
 
 <link rel="shortcut icon" href="/favicon.ico"><!-- Chrome, Safari, IE -->
 <!-- Firefox, Opera (Chrome and Safari say thanks but no thanks) -->
@@ -30,7 +30,7 @@
 
 
 <?php
-require_once 'mobile-detect.php';
+require_once '../mobile-detect.php';
 $detect = new Mobile_Detect;
 $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') : 'desktop');
 $scriptVersion = $detect->getScriptVersion();
