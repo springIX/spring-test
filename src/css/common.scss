@@ -27,11 +27,11 @@ html {
 @import "./partials/btn";
 @import "./partials/swiper";
 @import "./partials/layout";
-@import "./partials/header";
-@import "./partials/footer";
-@import "./partials/main";
 @import "./partials/error";
 
+@import "./components/header";
+@import "./components/footer";
+@import "./components/main";
 *:focus {
   outline: 0;
 }
