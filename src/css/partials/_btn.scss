@@ -60,4 +60,15 @@
         border-width: 0.8vw;
     }
   }
+
+  &.btn-more{ 
+    background-color: transparent; border: none; text-align: center; display: flex; cursor: pointer;
+    &::before{ 
+      content: 'Touch more'; color: $color-white; 
+      background-color: $color-black; font-family: $font-en; 
+      @include font-weight(Bold); width: 150px; height: 56px; 
+      line-height: 56px; border-radius: 2px;}
+    &::after{ content: ''; width: 56px; height: 56px; background: $color-black url()no-repeat center center / 40% auto; margin-left: 1px; border-radius: 2px;}
+  }
+
 }

@@ -16,15 +16,16 @@ body {
   }
 }
 img{ display: block;}
-div, p, span, a, section, label, input, button, h1, h2, h3, h4, h5, h6, ul, ol, li, header, footer, main, b, i, strong, select{ box-sizing: border-box;}
-a{ text-decoration: none; color: inherit;}
+div, p, span, a, section, label, input, button, h1, h2, h3, h4, h5, h6, ul, ol, li, header, footer, main, b, i, strong, select{ box-sizing: border-box; padding: 0; margin: 0;}
+a{ display: block; text-decoration: none; color: inherit;}
+button{ background-color: transparent; border: none; cursor: pointer; color: inherit;}
 
 // eng
 .pps{  font-family: $font-en;}
 
 
 // headline component
-h2{ 
+.h2_{ 
   font-family: $font-en;
   @include font-weight(Regular);
   @include font-size(M, 40px);
@@ -37,7 +38,7 @@ h2{
   }
 } // 히어로배너 타이틀
 
-h3{
+.h3_{
   @include font-weight(Bold);
   @include font-size(M, 40px);
 	@include font-size(D, 100px);
@@ -53,7 +54,7 @@ h3{
   }
 } // 섹션 타이틀
 
-h4{
+.h4_{
   @include font-weight(Regular);
   @include font-size(M, 32px);
 	@include font-size(D, 80px);
@@ -63,7 +64,7 @@ h4{
   }
 } // 섹션 타이틀2
 
-h5{
+.h5_{
   font-family: $font-en;
   @include font-weight(Bold);
   @include font-size(M, 14px);
@@ -151,14 +152,3 @@ h5{
   }
 } // 부연설명
 
-
-// btn component
-.btn{ 
-  background-color: transparent; border: none; text-align: center; display: flex; cursor: pointer;
-  &::before{ 
-    content: 'Touch more'; color: $color-white; 
-    background-color: $color-black; font-family: $font-en; 
-    @include font-weight(Bold); width: 150px; height: 56px; 
-    line-height: 56px; border-radius: 2px;}
-  &::after{ content: ''; width: 56px; height: 56px; background: $color-black url()no-repeat center center / 40% auto; margin-left: 1px; border-radius: 2px;}
-}
