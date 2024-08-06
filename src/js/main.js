@@ -59,19 +59,6 @@ $(function () {
 			},
 			on: {
 				init: (swiper) => {
-					// const videos = swiper.el.querySelectorAll(".image-area .inner.mobile .video");
-					// videos.forEach((video, index) => {
-					// 	let id = null;
-					// 	const interval = (timestamp) => {
-					// 		if (video.paused === false) {
-					// 			video.removeAttribute("style");
-					// 			video.style.objectFit = "contain";
-					// 			return cancelAnimationFrame(id);
-					// 		}
-					// 		id = requestAnimationFrame(interval);
-					// 	};
-					// 	interval();
-					// });
 				},
 			},
 		});
